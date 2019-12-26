@@ -10,8 +10,8 @@ import ndjson
 import os
 from google.cloud import bigquery
 
-with open("/root/etl_prod_notification/config_push_notification.json", "r") as read_file:
-    CONFIG = json.load(read_file)['config_push_notification']
+with open("config.json", "r") as read_file:
+    CONFIG = json.load(read_file)['config']
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = CONFIG['service_account']
 
